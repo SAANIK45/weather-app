@@ -7,5 +7,15 @@ const loadData = () =>{
     `
     fetch(url)
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => getData(data))
+
+}
+
+const getData = (data) =>{
+    const city = data.name;
+    const kelvinDegree = data.main.temp;
+    const calculateTemp = kelvinDegree - 273.15;
+    const temp = calculateTemp.toFixed(2);
+    const lead = data.weather[0].main;
+    console.log(data,city,temp,lead);
 }
