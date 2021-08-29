@@ -3,7 +3,7 @@ const loadData = () =>{
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     const url = `
-    http://api.openweathermap.org/data/2.5/weather?q=${searchText}&APPID=d4a66b9266cda3c0aca81ab849bc4d0d
+    https://api.openweathermap.org/data/2.5/weather?q=${searchText}&APPID=d4a66b9266cda3c0aca81ab849bc4d0d
     `
     if(searchText.length == 0){
         const error = document.getElementById('error-message');
